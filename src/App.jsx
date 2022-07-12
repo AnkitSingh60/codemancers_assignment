@@ -1,11 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+const URL = "https://api.giphy.com/v1/gifs/search?api_key=owr0fGUQKHF9ZE8AC2WT293nXFFe1Qtg&q=hello&limit=25&offset=0&rating=g&lang=en";
 
 function App() {
+
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const getData = async() => {
+    let res = await fetch(URL);
+    res = await res.json() 
+    // console.log(res.data);
+    setData(res.data);
+  }
+  // console.log('data:', data)
+
+  useEffect(() => {
+    getData()
+  }, [])
+  
 
 
   return (
