@@ -7,7 +7,7 @@ const URL =
 function App() {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
-  const [loading, setLoading] = useState(false);
+
 
   const getData = async () => {
     let res = await fetch(URL);
