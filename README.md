@@ -8,6 +8,16 @@ In the project directory, you can run:
 
 ### `npm start`
 
+#ScreenShots
+
+- Home page
+- <img src="https://user-images.githubusercontent.com/93372584/178463090-89f15d6d-4767-4458-ac4b-bf7d75990fbe.png" style="width: 100%; max-width: 100%; height: auto" title="Click to enlarge picture" />
+
+- Home page with search result
+- <img src="https://user-images.githubusercontent.com/93372584/178463282-c6a0af36-40b5-4319-ba6a-31c1a6056733.png" style="width: 100%; max-width: 100%; height: auto" title="Click to enlarge picture" />
+  
+
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
