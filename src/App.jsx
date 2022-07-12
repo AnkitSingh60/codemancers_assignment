@@ -8,7 +8,6 @@ function App() {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
 
-
   const getData = async () => {
     let res = await fetch(URL);
     res = await res.json();
@@ -22,7 +21,7 @@ function App() {
   console.log("data:", data);
 
   const searchGif = async () => {
-    if(search.length > 0) {
+    if (search.length > 0) {
       let res = await fetch(
         `https://api.giphy.com/v1/gifs/search?api_key=owr0fGUQKHF9ZE8AC2WT293nXFFe1Qtg&q=${search}&limit=25&offset=0&rating=g&lang=en`
       );
@@ -35,7 +34,7 @@ function App() {
       setSearch("");
     }
   };
-  
+
   useEffect(() => {
     getData();
     searchGif();
@@ -43,15 +42,25 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="heading">Gifs</h1>
-      <div className="search">
-        <input
-          type="text"
-          placeholder="Search"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <button onClick={searchGif}>Search</button>
+      <h4 className="heading">CODEMANCERS GIFS SHOP</h4>
+      <div className="input-group">
+        <div className="form-outline search">
+          <input
+            placeholder="Search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            type="search"
+            id="form1"
+            className="form-control"
+          />
+          <button
+            type="button"
+            className="btn btn-primary "
+            onClick={searchGif}
+          >
+            Search
+          </button>
+        </div>
       </div>
       <div className="result">
         {data.map((item) => {
